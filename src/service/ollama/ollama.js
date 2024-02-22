@@ -15,7 +15,7 @@ class OllamaOrchestrator {
   constructor(ollamaModule) {
     this.childProcess = null;
     this.messages = []; // stores the chat message history for the current session
-    this.host = "http://127.0.0.1:11434"; // TODO: check OLLAMA_HOST env var
+    this.host = "http://192.168.8.8:11434"; // TODO: check OLLAMA_HOST env var
     this.ollama = new ollamaModule.Ollama({ host: this.host });
   }
 
@@ -141,7 +141,7 @@ class OllamaOrchestrator {
 
   async run(model, fn) {
     try {
-        await this.pull(model, fn);
+      await this.pull(model, fn);
     } catch (err) {
       logErr('failed to pull before run: ' + err);
       if (!err.message.includes("pull model manifest")) {

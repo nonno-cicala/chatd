@@ -59,7 +59,7 @@ const createWindow = () => {
 
   if (!app.isPackaged) {
     global.debug = true;
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
   }
 };
 

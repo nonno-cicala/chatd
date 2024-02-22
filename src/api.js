@@ -16,7 +16,7 @@ const {
   serve,
 } = require("./service/ollama/ollama.js");
 
-let model = "mistral";
+let model = "mixtral";
 let loadingDoc = false;
 
 function debugLog(msg) {
